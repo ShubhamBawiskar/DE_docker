@@ -2,7 +2,7 @@
 FROM python:3.14-slim
 
 # Install dependencies
-pip install streamlit
+RUN pip install streamlit
 
 # Set working directory
 WORKDIR /app
@@ -10,6 +10,6 @@ WORKDIR /app
 # Copy file
 COPY app.py .
 
-#  Run streamlit
+# Run streamlit
 EXPOSE 8501
 CMD ["streamlit", "run", "app.py"]
